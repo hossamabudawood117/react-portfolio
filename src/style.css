@@ -1,0 +1,202 @@
+/* ========================================
+   1. REFRESHED COHESIVE COLOR CONFIGURATION
+   ======================================== */
+:root {
+    --primary: #06b6d4 !important;       /* Electric Cyan */
+    --secondary: #8b5cf6 !important;     /* Radiant Violet */
+    --bg: #030712 !important;            /* Solid Deep Obsidian Space */
+    --card-bg: rgba(15, 23, 42, 0.6) !important; /* Premium Slate Glass Tint */
+    --card-hover: rgba(30, 41, 59, 0.8) !important;
+    --text: #f8fafc !important;          /* Hyper-Crisp Cool White */
+    --text-muted: #94a3b8 !important;    /* Highly Readable Muted Slate */
+    --border: rgba(255, 255, 255, 0.08) !important;
+    --accent-glow: rgba(6, 182, 212, 0.2) !important;
+    --transition-main: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Body Framework Overwrites */
+html, body {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Cohesive Dynamic Background Spotlights */
+.blob, .blob2 {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    filter: blur(160px);
+    z-index: -1;
+    opacity: 0.12;
+    pointer-events: none;
+}
+.blob { top: -150px; left: -150px; background: var(--primary) !important; }
+.blob2 { bottom: -150px; right: -150px; background: var(--secondary) !important; }
+
+/* Elegant Typography Gradients */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* ========================================
+   💥 FORCED BENTO CARD STRUCTURAL LAYERS
+   ======================================== */
+.custom-bento-card {
+    background: rgba(15, 23, 42, 0.6) !important; /* Premium Slate Glass Tint */
+    border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Highly visible light border */
+    border-radius: 24px !important; /* Distinct modern rounded corners */
+    padding: 32px !important;
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    color: #f8fafc !important;
+    text-decoration: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important; /* Force cards to take full height of the grid slot */
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Make cards stand out with a beautiful glow on hover */
+.custom-bento-card:hover {
+    transform: translateY(-6px) !important;
+    background: rgba(30, 41, 59, 0.8) !important;
+    border-color: #06b6d4 !important; /* Glow Cyan border on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 
+                0 0 30px rgba(6, 182, 212, 0.2) !important;
+}
+
+/* Text adjustments for pristine readability */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.badge {
+    background: rgba(6, 182, 212, 0.1) !important;
+    color: var(--primary) !important;
+    border: 1px solid rgba(6, 182, 212, 0.2) !important;
+    font-weight: 600;
+}
+
+/* Re-styled Progress Component */
+.bar-container {
+    background: rgba(255, 255, 255, 0.03) !important;
+    height: 8px;
+    border-radius: 20px;
+    margin: 20px 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bar {
+    height: 100%;
+    background: linear-gradient(to right, var(--primary), var(--secondary)) !important;
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.6) !important;
+}
+
+/* Smooth Input Interfaces */
+.custom-input {
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text) !important;
+    border-radius: 12px !important;
+    padding: 12px 16px !important;
+}
+
+.custom-input:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.25) !important;
+}
+
+/* Active navigation highlighted crisp and clean */
+.nav-link {
+    transition: color 0.2s ease;
+}
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+.nav-link.active {
+    color: var(--primary) !important;
+    font-weight: 700;
+}
+
+/* Custom interactive buttons buttons */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+    border: none !important;
+    color: #030712 !important; /* Deep dark text on bright button for max contrast */
+    font-weight: 700 !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.btn-primary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4) !important;
+}
+
+/* ========================================
+   🎯 PREMIUM READABILITY INPUT PLACEHOLDERS
+   ======================================== */
+
+/* Standard modern placeholder specification */
+.custom-input::placeholder {
+    color: rgba(248, 250, 252, 0.45) !important; /* Elegant slate white with crisp 45% transparency */
+    opacity: 1 !important; /* Overrides Firefox defaults */
+}
+
+/* Chrome, Safari, and Opera */
+.custom-input::-webkit-input-placeholder {
+    color: rgba(248, 250, 252, 0.45) !important;
+}
+
+/* Firefox 4 to 18 */
+.custom-input:-moz-placeholder {
+    color: rgba(248, 250, 252, 0.45) !important;
+    opacity: 1 !important;
+}
+
+/* Firefox 19+ */
+.custom-input::-moz-placeholder {
+    color: rgba(248, 250, 252, 0.45) !important;
+    opacity: 1 !important;
+}
+
+/* Internet Explorer 10-11 */
+.custom-input:-ms-input-placeholder {
+    color: rgba(248, 250, 252, 0.45) !important;
+}
+
+/* Edge HTML Engine */
+.custom-input::-ms-input-placeholder {
+    color: rgba(248, 250, 252, 0.45) !important;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+/* ========================================
+   🚀 PAGE ROUTING TRANSITIONS
+   ======================================== */
+.page-transition {
+    animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: opacity, transform;
+}
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
