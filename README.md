@@ -4,8 +4,6 @@
 ![React Router](https://img.shields.io/badge/React_Router-6.0-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![Deployment](https://img.shields.io/badge/Hosted-GitHub_Pages-181717?style=for-the-badge&logo=github&logoColor=white)
 
-**Live Production Build:** [Insert Your GitHub Pages Link Here]
-
 ## ⚡ Overview
 Unlike a traditional static portfolio, this project is engineered as an active "Digital Garden." It documents thoughts, technical experiments, and structural layout protocols in their natural state. Built entirely in React, the architecture prioritizes seamless component transitions, rigorous state management, and secure asynchronous data handling.
 
